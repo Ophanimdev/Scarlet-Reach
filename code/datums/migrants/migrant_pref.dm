@@ -51,7 +51,7 @@
 		return
 	var/list/dat = list()
 	var/current_migrants = SSmigrants.get_active_migrant_amount()
-	dat += "WAVE: \Roman[SSmigrants.wave_number]"
+	dat += "WAVE:[SSmigrants.wave_number]"
 	dat += "<center><b>BE A MIGRANT: <a href='?src=[REF(src)];task=toggle_active'>[active ? "YES" : "NO"]</a></b></center>"
 	dat += "<br><center>Wandering fools: [current_migrants ? "\Roman[current_migrants]" : "None"]</center>"
 	if(!SSmigrants.current_wave)
@@ -68,8 +68,8 @@
 			var/stars_amount = SSmigrants.get_stars_on_role(role_type)
 			var/stars_string = ""
 			if(stars_amount)
-				stars_string = "(*\Roman[stars_amount])"
-			dat += "<center><a href='?src=[REF(src)];task=toggle_role_preference;role=[role_type]'>[role_name]</a> - \Roman[role_amount] [stars_string]</center>"
+				stars_string = "(*[stars_amount])"
+			dat += "<center><a href='?src=[REF(src)];task=toggle_role_preference;role=[role_type]'>[role_name]</a> - [role_amount] [stars_string]</center>"
 
 		dat += "<br><center>They will arrive in [(SSmigrants.wave_timer / (1 SECONDS))] seconds...</center>"
 

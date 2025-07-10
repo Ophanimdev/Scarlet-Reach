@@ -136,9 +136,9 @@
 
 /datum/sleep_adv/proc/show_ui(mob/living/user)
 	var/list/dat = list()
-	dat += "<center>Cycle \Roman[sleep_adv_cycle]</center>"
+	dat += "<center>Cycle [sleep_adv_cycle]</center>"
 	dat += "<br><center>Dream, for those who dream may reach higher heights</center><br>"
-	dat += "<center>\Roman[sleep_adv_points]</center>"
+	dat += "<center>[sleep_adv_points]</center>"
 	for(var/skill_type in SSskills.all_skills)
 		var/datum/skill/skill = GetSkillRef(skill_type)
 		if(!enough_sleep_xp_to_advance(skill_type, 1))
@@ -146,11 +146,11 @@
 		var/can_buy = can_buy_skill(skill_type)
 		var/next_level = get_next_level_for_skill(skill_type)
 		var/level_name = SSskills.level_names[next_level]
-		dat += "<br><a [can_buy ? "" : "class='linkOff'"] href='?src=[REF(src)];task=buy_skill;skill_type=[skill_type]'>[skill.name] ([level_name])</a> - \Roman[get_skill_cost(skill_type)]"
+		dat += "<br><a [can_buy ? "" : "class='linkOff'"] href='?src=[REF(src)];task=buy_skill;skill_type=[skill_type]'>[skill.name] ([level_name])</a> - [get_skill_cost(skill_type)]"
 	dat += "<br>"
 	if(rolled_specials > 0)
 		var/can_buy = can_buy_special()
-		dat += "<br><a [can_buy ? "" : "class='linkOff'"] href='?src=[REF(src)];task=buy_special'>Dream something <b>special</b></a> - \Roman[get_special_cost()]"
+		dat += "<br><a [can_buy ? "" : "class='linkOff'"] href='?src=[REF(src)];task=buy_special'>Dream something <b>special</b></a> - [get_special_cost()]"
 		dat += "<br>Specials can have negative or positive effects"
 	dat += "<br><br><center>Your points will be retained<br><a href='?src=[REF(src)];task=continue'>Continue</a></center>"
 	var/datum/browser/popup = new(user, "dreams", "<center>Dreams</center>", 350, 450)

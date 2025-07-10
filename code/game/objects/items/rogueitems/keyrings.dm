@@ -52,7 +52,7 @@
 
 /obj/item/storage/keyring/proc/update_desc()
 	if(contents.len)
-		desc = span_info("Holds \Roman[contents.len] key\s, including:")
+		desc = span_info("Holds [contents.len] key\s, including:")
 		for(var/obj/item/roguekey/KE in contents)
 			desc += span_info("\n- [KE.name ? "A [KE.name]." : "	An unknown key."]")
 	else
