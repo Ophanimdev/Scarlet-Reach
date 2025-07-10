@@ -4,7 +4,7 @@
 #define SPELL_SCALING_THRESHOLD 10 // The threshold at which the spell scaling starts to kick in
 #define SPELL_POSITIVE_SCALING_THRESHOLD 99 // The threshold at which spell scaling stop
 #define FATIGUE_REDUCTION_PER_INT 0.05 // The amount of fatigue reduction per point of intelligence above / below threshold
-#define COOLDOWN_REDUCTION_PER_INT 0.05 // The amount of cooldown reduction per point of intelligence above / below threshold
+#define COOLDOWN_REDUCTION_PER_INT 0.2 // The amount of cooldown reduction per point of intelligence above / below threshold
 #define CHARGE_REDUCTION_PER_SKILL 0.05 // The amount of charge reduction per skill level.
 #define FATIGUE_REDUCTION_PER_SKILL 0.05 // The amount of fatigue reduction per skill level.
 
