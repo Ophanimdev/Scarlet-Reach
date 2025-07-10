@@ -53,7 +53,7 @@
 	var/current_migrants = SSmigrants.get_active_migrant_amount()
 	dat += "WAVE:[SSmigrants.wave_number]"
 	dat += "<center><b>BE A MIGRANT: <a href='?src=[REF(src)];task=toggle_active'>[active ? "YES" : "NO"]</a></b></center>"
-	dat += "<br><center>Wandering fools: [current_migrants ? "\Roman[current_migrants]" : "None"]</center>"
+	dat += "<br><center>Wandering fools: [current_migrants ? "[current_migrants]" : "None"]</center>"
 	if(!SSmigrants.current_wave)
 		dat += "<br><center>The mist will clear out of the way in [(SSmigrants.time_until_next_wave / (1 SECONDS))] seconds...</center>"
 	else

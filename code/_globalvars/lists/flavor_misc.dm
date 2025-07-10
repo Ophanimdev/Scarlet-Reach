@@ -201,7 +201,7 @@ GLOBAL_LIST_INIT(roundid, world.file2list("strings/roundid.txt"))
 	var/list/L[198]
 	for(var/i in 1 to 99)
 		L += "[i]"
-		L += "\Roman[i]"
+		L += "[i]"
 	return L
 
 GLOBAL_LIST_INIT(station_numerals, greek_letters + phonetic_alphabet + numbers_as_words + generate_number_strings())

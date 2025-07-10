@@ -201,7 +201,7 @@
 /obj/item/lockpickring/proc/update_desc()
 	if(picks.len)
 		desc = initial(desc)
-		desc += "<span class='info'>\n\Roman [picks.len] lockpicks.</span>"
+		desc += "<span class='info'>\n [picks.len] lockpicks.</span>"
 	else
 		desc = initial(desc)
 
