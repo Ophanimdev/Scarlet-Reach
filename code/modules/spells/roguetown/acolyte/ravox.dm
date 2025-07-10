@@ -13,7 +13,7 @@
 	associated_skill = /datum/skill/magic/holy
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
 	sound = 'sound/magic/timestop.ogg'
-	invocation = "By Ravox, stand and fight!"
+	invocation = "I WILL WATER SION TODAY!"
 	invocation_type = "shout"
 	antimagic_allowed = TRUE
 	miracle = TRUE
@@ -82,7 +82,7 @@
 	overlay_state = "call_to_arms"
 	recharge_time = 5 MINUTES
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
-	invocation = "FOR GLORY AND HONOR!"
+	invocation = "BOOTS WILL BREAK THE FANG!"
 	invocation_type = "shout"
 	sound = 'sound/magic/timestop.ogg'
 	releasedrain = 30
@@ -115,7 +115,7 @@
 	warnie = "sydwarning"
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
 	sound = 'sound/magic/timestop.ogg'
-	invocation = "Ravox deems your persistence worthy!"
+	invocation = "Blood will have blood!"
 	invocation_type = "shout"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
@@ -180,7 +180,7 @@
 	associated_skill = /datum/skill/magic/holy
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
 	sound = 'sound/magic/timestop.ogg'
-	invocation = "By Ravox, let your sins guide you to justice!"
+	invocation = "Ravox, lower the stone!"
 	invocation_type = "shout"
 	antimagic_allowed = FALSE
 	miracle = TRUE

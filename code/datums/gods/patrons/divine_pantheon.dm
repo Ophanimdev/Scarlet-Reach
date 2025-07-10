@@ -92,9 +92,9 @@
 
 /datum/patron/divine/ravox
 	name = "Ravox"
-	domain = "God of Justice, Glory, Battle"
-	desc = "Stalwart warrior, glorious justicier; legends say he came down to the Basin to repel the vile hordes of demons with his own hands, and that he seeks warriors for his divine army among mortals."
-	worshippers = "Warriors, Sellswords & those who seek Justice"
+	domain = "God of War, Glory, Battle"
+	desc = "Ravox is a mighty pillar of the faith, while to the uncivilized he is an abstraction or an uncouth necessity, he is the recognized deliverer of any kind of courage or strategy. His followers: Make war, for battle tempers the flesh and strenghens resolve. Reap the spoils of battle ; a warrior's fortunes are made on the field. Die well, and record the glorious so that their legend may be remembered for eternity."
+	worshippers = "Soldiers, Sellswords, Bandits, Bards, Barbarians & Veterans"
 	mob_traits = list(TRAIT_SHARPER_BLADES, TRAIT_JUSTICARSIGHT)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison			= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/invoked/tug_of_war			= CLERIC_T0,
@@ -104,7 +104,7 @@
 					/obj/effect/proc_holder/spell/invoked/persistence			= CLERIC_T3,
 	)
 	confess_lines = list(
-		"RAVOX IS JUSTICE!",
+		"BOOTS BREAK THE FANG!",
 		"THROUGH STRIFE, GRACE!",
 		"THROUGH PERSISTENCE, GLORY!",
 	)
