@@ -124,8 +124,6 @@
 		var/mob/living/carbon/human/human_owner = owner
 		if(human_owner.checkcritarmor(zone_precise, bclass))
 			return FALSE
-		if(owner.mind && (get_damage() <= (max_damage * 0.9))) //No crits unless the damage is maxed out.
-			do_crit = FALSE // We used to check if they are buckled or lying down but being grounded is a big enough advantage.
 	if(user)
 		if(user.goodluck(2))
 			dam += 10
