@@ -93,7 +93,7 @@
 /datum/patron/divine/ravox
 	name = "Ravox"
 	domain = "God of War, Glory, Battle"
-	desc = "Ravox is a mighty pillar of the faith, while to the uncivilized he is an abstraction or an uncouth necessity, he is the recognized deliverer of any kind of courage or strategy. His followers: Make war, for battle tempers the flesh and strenghens resolve. Reap the spoils of battle ; a warrior's fortunes are made on the field. Die well, and record the glorious so that their legend may be remembered for eternity."
+	desc = "Ravox is a mighty pillar of the faith, while to the civilized he is an abstraction or an uncouth necessity, he is the recognized deliverer of any kind of courage or strategy. His followers: Make war, for battle tempers the flesh and strenghens resolve. Reap the spoils of battle ; a warrior's fortunes are made on the field. Die well, and record the glorious so that their legend may be remembered for eternity."
 	worshippers = "Soldiers, Sellswords, Bandits, Bards, Barbarians & Veterans"
 	mob_traits = list(TRAIT_SHARPER_BLADES, TRAIT_JUSTICARSIGHT)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison			= CLERIC_ORI,
