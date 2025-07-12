@@ -3099,10 +3099,6 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
-"baA" = (
-/obj/structure/roguemachine/goldface/public,
-/turf/closed/wall/mineral/rogue/wooddark,
-/area/rogue/indoors/town/shop)
 "baD" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/rogue/cobble,
@@ -266381,7 +266377,7 @@ eBq
 sns
 sns
 uCs
-baA
+mPk
 dHL
 fUk
 dHL
