@@ -59,7 +59,7 @@
 
 /obj/structure/roguemachine/goldface/public
 	name = "SILVERFACE"
-	extra_fee = 0.5
+	extra_fee = 2.0
 	is_public = TRUE
 	locked = FALSE
 
