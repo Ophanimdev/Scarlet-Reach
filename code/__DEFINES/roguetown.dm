@@ -141,11 +141,9 @@
     /datum/species/vulpkanin,\
     /datum/species/lupian,\
     /datum/species/anthromorphsmall,\
-    /datum/species/kobold,\
     /datum/species/moth,\
     /datum/species/anthromorph,\
     /datum/species/tabaxi,\
-    /datum/species/lizardfolk,\
     /datum/species/dracon,\
     /datum/species/akula,\
 
@@ -154,6 +152,8 @@
     /datum/species/halforc,\
     /datum/species/tieberian,\
     /datum/species/elf/dark,\
+	/datum/species/kobold,\
+	/datum/species/lizardfolk,\
 
 #define RACES_CONSTRUCT \
 	/datum/species/construct/metal,\
