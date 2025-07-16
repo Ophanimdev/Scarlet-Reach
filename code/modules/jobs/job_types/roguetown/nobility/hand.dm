@@ -5,7 +5,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	allowed_races = RACES_ALL_KINDS	//Duke selects his hand.
+	allowed_races = RACES_TOLERATED_UP	//The Duke selects his hand, but they probably wouldn't pick a goblin freek
 	allowed_patrons = NON_PSYDON_PATRONS
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
