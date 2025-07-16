@@ -59,12 +59,8 @@
 
 /datum/outfit/job/roguetown/knight
 	cloak = /obj/item/clothing/cloak/stabard/surcoat/guard
-	neck = /obj/item/clothing/neck/roguetown/bevor
-	gloves = /obj/item/clothing/gloves/roguetown/plate
-	wrists = /obj/item/clothing/wrists/roguetown/bracers
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
 	belt = /obj/item/storage/belt/rogue/leather/steel
-	backr = /obj/item/storage/backpack/rogue/satchel/black
 	id = /obj/item/scomstone/bad/garrison
 	backpack_contents = list(/obj/item/storage/keyring/guardknight = 1)
 
@@ -133,8 +129,8 @@
 			r_hand = /obj/item/rogueweapon/spear/partizan
 			backl = /obj/item/gwstrap
 
-	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
-	pants = /obj/item/clothing/under/roguetown/chainlegs
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
+	pants = /obj/item/clothing/under/roguetown/trou/leather
 
 	var/helmets = list(
 		"Pigface Bascinet" 	= /obj/item/clothing/head/roguetown/helmet/bascinet/pigface,
@@ -209,9 +205,8 @@
 		if("Sabre")
 			beltl = /obj/item/rogueweapon/sword/sabre
 	
-	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
-	pants = /obj/item/clothing/under/roguetown/chainlegs
-	backl = /obj/item/rogueweapon/shield/tower/metal
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
+	pants = /obj/item/clothing/under/roguetown/trou/leather
 
 	var/helmets = list(
 		"Pigface Bascinet" 	= /obj/item/clothing/head/roguetown/helmet/bascinet/pigface,
@@ -308,8 +303,8 @@
 			backl = /obj/item/rogueweapon/shield/tower/metal
 			H.adjust_skillrank_up_to(/datum/skill/combat/shields, 2, TRUE) // Let them skip dummy hitting
 
-	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
-	pants = /obj/item/clothing/under/roguetown/chainlegs
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
+	pants = /obj/item/clothing/under/roguetown/trou/leather
 
 	var/helmets = list(
 		"Pigface Bascinet" 	= /obj/item/clothing/head/roguetown/helmet/bascinet/pigface,
@@ -416,11 +411,11 @@
 			armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat
 		if("Medium Armor")
 			shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
-			pants = /obj/item/clothing/under/roguetown/chainlegs
+			pants = /obj/item/clothing/under/roguetown/trou/leather
 			armor = /obj/item/clothing/suit/roguetown/armor/brigandine/light
 		if("Medium Cuirass")
 			shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
-			pants = /obj/item/clothing/under/roguetown/chainlegs
+			pants = /obj/item/clothing/under/roguetown/trou/leather
 			armor = /obj/item/clothing/suit/roguetown/armor/plate/half/fluted
 
 	var/helmets = list(

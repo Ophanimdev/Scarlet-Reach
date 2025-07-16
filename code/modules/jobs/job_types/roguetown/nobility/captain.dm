@@ -27,7 +27,6 @@
 	cmode_music = 'sound/music/combat_knight.ogg'
 
 /datum/outfit/job/roguetown/captain
-	neck = /obj/item/clothing/neck/roguetown/bevor
 	armor = /obj/item/clothing/suit/roguetown/armor/plate
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
 	pants = /obj/item/clothing/under/roguetown/chainlegs
@@ -79,7 +78,6 @@
 
 /datum/outfit/job/roguetown/captain/infantry/pre_equip(mob/living/carbon/human/H)
 	..()
-	backr = /obj/item/storage/backpack/rogue/satchel/black
 	backpack_contents = list(
 		/obj/item/storage/keyring/sheriff = 1,
 		/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1,
@@ -154,22 +152,6 @@
 		if("Sabre & Shield")
 			beltr = /obj/item/rogueweapon/sword/sabre
 			backl = /obj/item/rogueweapon/shield/tower/metal
-	var/helmets = list(
-		"Pigface Bascinet" 	= /obj/item/clothing/head/roguetown/helmet/bascinet/pigface,
-		"Guard Helmet"		= /obj/item/clothing/head/roguetown/helmet/heavy/guard,
-		"Barred Helmet"		= /obj/item/clothing/head/roguetown/helmet/heavy/sheriff,
-		"Bucket Helmet"		= /obj/item/clothing/head/roguetown/helmet/heavy/bucket,
-		"Knight Helmet"		= /obj/item/clothing/head/roguetown/helmet/heavy/knight,
-		"Visored Sallet"	= /obj/item/clothing/head/roguetown/helmet/sallet/visored,
-		"Armet"				= /obj/item/clothing/head/roguetown/helmet/heavy/knight/armet,
-		"Hounskull Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull,
-		"Etruscan Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan,
-		"Slitted Kettle"	= /obj/item/clothing/head/roguetown/helmet/heavy/knight/skettle,
-		"None"
-	)
-	var/helmchoice = input("Choose your Helm.", "TAKE UP HELMS") as anything in helmets
-	if(helmchoice != "None")
-		head = helmets[helmchoice]
 
 /datum/advclass/captain/cavalry
 	name = "Cavalry Captain"
@@ -181,8 +163,6 @@
 
 /datum/outfit/job/roguetown/captain/cavalry/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
-	backr = /obj/item/storage/backpack/rogue/satchel/black
 	backpack_contents = list(
 		/obj/item/storage/keyring/sheriff = 1,
 		/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1,
@@ -249,23 +229,7 @@
 		if("Lance + Kite Shield")
 			r_hand = /obj/item/rogueweapon/spear/lance
 			backl = /obj/item/rogueweapon/shield/tower/metal
-	var/helmets = list(
-		"Pigface Bascinet" 	= /obj/item/clothing/head/roguetown/helmet/bascinet/pigface,
-		"Guard Helmet"		= /obj/item/clothing/head/roguetown/helmet/heavy/guard,
-		"Barred Helmet"		= /obj/item/clothing/head/roguetown/helmet/heavy/sheriff,
-		"Bucket Helmet"		= /obj/item/clothing/head/roguetown/helmet/heavy/bucket,
-		"Knight Helmet"		= /obj/item/clothing/head/roguetown/helmet/heavy/knight,
-		"Visored Sallet"	= /obj/item/clothing/head/roguetown/helmet/sallet/visored,
-		"Armet"				= /obj/item/clothing/head/roguetown/helmet/heavy/knight/armet,
-		"Hounskull Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull,
-		"Etruscan Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan,
-		"Slitted Kettle"	= /obj/item/clothing/head/roguetown/helmet/heavy/knight/skettle,
-		"None"
-	)
-	var/helmchoice = input("Choose your Helm.", "TAKE UP HELMS") as anything in helmets
-	if(helmchoice != "None")
-		head = helmets[helmchoice]
-
+			
 /obj/effect/proc_holder/spell/self/convertrole
 	name = "Recruit Beggar"
 	desc = "Recruit someone to your cause."

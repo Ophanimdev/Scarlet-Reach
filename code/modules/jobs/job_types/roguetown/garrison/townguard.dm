@@ -90,7 +90,6 @@ Archer is basically a 'bounty-catcher' in function, less specialized at close-qu
 	head = /obj/item/clothing/head/roguetown/helmet
 	beltr = /obj/item/rogueweapon/mace/cudgel
 	backr = /obj/item/rogueweapon/shield/wood		//Maybe give a buckler? Gave wood because 40 coverage is better than 10 but dunno.
-	backr = /obj/item/storage/backpack/rogue/satchel/black
 	beltl = /obj/item/storage/keyring/guardcastle
 	belt = /obj/item/storage/belt/rogue/leather/black
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1, /obj/item/rope/chain = 1)
@@ -134,7 +133,6 @@ Archer is basically a 'bounty-catcher' in function, less specialized at close-qu
 	armor = /obj/item/clothing/suit/roguetown/armor/leather		//So they get default-dodge expert usage.
 	beltr = /obj/item/quiver/bolts
 	backl = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
-	backr = /obj/item/storage/backpack/rogue/satchel/black
 	beltl = /obj/item/storage/keyring/guardcastle
 	belt = /obj/item/storage/belt/rogue/leather/black
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1, /obj/item/rope/chain = 1)
