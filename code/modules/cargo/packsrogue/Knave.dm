@@ -34,16 +34,6 @@
 	cost = 30
 	contains = list(/obj/item/clothing/suit/roguetown/armor/leather/heavy/coat)
 
-/datum/supply_pack/rogue/Knave/gorget
-	name = "Gorget"
-	cost = 20
-	contains = list(/obj/item/clothing/neck/roguetown/gorget)
-
-/datum/supply_pack/rogue/Knave/gorget
-	name = "Steel Coif"
-	cost = 30
-	contains = list(/obj/item/clothing/neck/roguetown/chaincoif)
-
 /datum/supply_pack/rogue/Knave/leather/Lbracers
 	name = "Leather Bracers"
 	cost = 5
@@ -109,26 +99,6 @@
 	cost = 10
 	contains = list(/obj/item/rogueweapon/huntingknife/idagger)
 
-/datum/supply_pack/rogue/Knave/daggerss
-	name = "Steel Dagger"
-	cost = 20
-	contains = list(/obj/item/rogueweapon/huntingknife/idagger/steel)
-
-/datum/supply_pack/rogue/Knave/parrydag
-	name = "Parry Dagger"
-	cost = 20
-	contains = list(/obj/item/rogueweapon/huntingknife/idagger/steel/parrying)
-
-/datum/supply_pack/rogue/Knave/Navaja
-	name = "Navaja"
-	cost = 20
-	contains = list(/obj/item/rogueweapon/huntingknife/idagger/navaja)
-
-/datum/supply_pack/rogue/Knave/elfdagger
-	name = "Elven Dagger"
-	cost = 40
-	contains = list(/obj/item/rogueweapon/huntingknife/idagger/silver/elvish)
-
 /datum/supply_pack/rogue/Knave/steeltossblades
 	name = "Steel Tossblade Belt"
 	cost = 20
@@ -143,11 +113,6 @@
 	name = "Bow"
 	cost = 10
 	contains = list(/obj/item/gun/ballistic/revolver/grenadelauncher/bow)
-
-/datum/supply_pack/rogue/Knave/quiver
-	name = "Empty Quiver"
-	cost = 5
-	contains = list(/obj/item/quiver)
 
 /datum/supply_pack/rogue/Knave/quivers/arrows
 	name = "Quiver of Arrows"

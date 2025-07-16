@@ -4,16 +4,6 @@
 	crate_name = "Gifts of Knowledge"
 	crate_type = /obj/structure/closet/crate/chest/merchant
 
-/datum/supply_pack/rogue/Mage/Dorpel
-	name = "Dorpel"
-	cost = 180
-	contains = list(/obj/item/roguegem/diamond)
-
-/datum/supply_pack/rogue/Mage/Rontz
-	name = "Rontz"
-	cost = 150
-	contains = list(/obj/item/roguegem/ruby)
-
 /datum/supply_pack/rogue/Mage/Blortz
 	name = "Blortz"
 	cost = 120
@@ -93,16 +83,6 @@
 	name = "Heavy Gambeson"
 	cost = 20
 	contains = list(/obj/item/clothing/suit/roguetown/armor/gambeson/heavy)
-
-/datum/supply_pack/rogue/Mage/icoif
-	name = "Iron Coif"
-	cost = 10
-	contains = list(/obj/item/clothing/neck/roguetown/chaincoif/iron)
-
-/datum/supply_pack/rogue/Mage/gorget
-	name = "Gorget"
-	cost = 20
-	contains = list(/obj/item/clothing/neck/roguetown/gorget)
 
 /datum/supply_pack/rogue/Mage/leather
 	name = "Leather Armor"

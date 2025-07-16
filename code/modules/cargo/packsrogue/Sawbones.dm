@@ -14,16 +14,6 @@
 	cost = 20
 	contains = list(/obj/item/clothing/suit/roguetown/armor/gambeson/heavy)
 
-/datum/supply_pack/rogue/Sawbones/icoif
-	name = "Iron Coif"
-	cost = 10
-	contains = list(/obj/item/clothing/neck/roguetown/chaincoif/iron)
-
-/datum/supply_pack/rogue/Sawbones/gorget
-	name = "Gorget"
-	cost = 20
-	contains = list(/obj/item/clothing/neck/roguetown/gorget)
-
 /datum/supply_pack/rogue/Sawbones/leather
 	name = "Leather Armor"
 	cost = 10
@@ -88,11 +78,6 @@
 	name = "Rapier"
 	cost = 20
 	contains = list(/obj/item/rogueweapon/sword/rapier)
-
-/datum/supply_pack/rogue/Sawbones/estoc
-	name = "Estoc"
-	cost = 40
-	contains = list(/obj/item/rogueweapon/estoc)
 
 /datum/supply_pack/rogue/Sawbones/gbottle
 	name = "Glass bottle"
