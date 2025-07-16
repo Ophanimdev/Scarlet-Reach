@@ -18,14 +18,6 @@
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/black
 	belt = /obj/item/storage/belt/rogue/leather/rope
 	beltr = /obj/item/reagent_containers/glass/bottle/rogue/manapot
-	backr = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(
-					/obj/item/needle/thorn = 1,
-					/obj/item/natural/cloth = 1,
-					/obj/item/flashlight/flare/torch = 1,
-					/obj/item/book/spellbook = 1, // Spell resetting is a key identity of good mage
-					)
-	mask = /obj/item/clothing/mask/rogue/facemask/steel //idk if this makes it so they cant cast but i want all of the bandits to have the same mask
 	neck = /obj/item/clothing/neck/roguetown/coif
 	head = /obj/item/clothing/head/roguetown/helmet/leather/volfhelm
 	id = /obj/item/mattcoin

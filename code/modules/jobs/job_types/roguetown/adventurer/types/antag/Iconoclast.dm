@@ -33,15 +33,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/random
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak/brown
-	backr = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(
-					/obj/item/needle/thorn = 1,
-					/obj/item/natural/cloth = 1,
-					/obj/item/flashlight/flare/torch = 1,
-					/obj/item/ritechalk = 1,
-					)
 	head = /obj/item/clothing/head/roguetown/roguehood
-	armor = /obj/item/clothing/suit/roguetown/armor/plate
 	beltr = /obj/item/rogueweapon/katar
 	id = /obj/item/mattcoin
 	H.change_stat("strength", 3) // LETS WRASSLE

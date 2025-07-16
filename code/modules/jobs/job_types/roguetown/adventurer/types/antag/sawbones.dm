@@ -21,14 +21,7 @@
 	beltr = /obj/item/rogueweapon/sword/rapier
 	pants = /obj/item/clothing/under/roguetown/trou
 	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-	backr = /obj/item/storage/backpack/rogue/satchel
 	id = /obj/item/mattcoin
-	backpack_contents = list(
-					/obj/item/natural/worms/leech/cheele = 1,
-					/obj/item/natural/cloth = 2,
-					/obj/item/flashlight/flare/torch = 1,
-					/obj/item/bedroll = 1,
-					)
 	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
