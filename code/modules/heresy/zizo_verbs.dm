@@ -45,3 +45,16 @@
 	stressadd = -5
 	desc = span_boldgreen("Zizo hears me!")
 	timer = 10 SECONDS
+
+/mob/living/carbon/human/proc/remember_associates()//It's a cult!
+	set name = "Remember Fellow Qabalists"
+	set category = "ZIZO"
+
+	to_chat(src, span_cultbold("Cultistes ov ZIZO"))
+	for(var/mob/living/carbon/human/C in GLOB.player_list)
+		if(HAS_TRAIT(C, TRAIT_CABAL) || C.patron == /datum/patron/inhumen/zizo)
+			var/name = C.real_name
+			var/job = C.job
+			to_chat(src, span_cultitalic("[name] - [job]"))
+
+
