@@ -165,7 +165,7 @@
 /datum/advclass/puritan/untouchable //Incompetent morons that find themselves
 	name = "Untouchable"
 	tutorial = "Noble families will at times send their misborn, incompetent successors too important to simply prune like any misborn branch, yet too much of a failure to entrust with any bureaucratic duties. The Holy Inquisition appreciates the grand donations that accompany these buffoons."
-	outfit = /datum/outfit/job/roguetown/puritan/inspector
+	outfit = /datum/outfit/job/roguetown/puritan/untouchable
 
 	category_tags = list(CTAG_PURITAN)
 
@@ -215,10 +215,11 @@
 		SEND_SIGNAL(src, COMSIG_TORTURE_PERFORMED, H)
 		H.emote("agony", forced = TRUE)
 		H.add_stress(/datum/stressevent/tortured)
+		H.interrogation(src) //Reach for the skies, immortal smoke!
 		return
 	to_chat(src, span_warning("This one is not in a ready state to be questioned..."))
 
-/mob/living/carbon/human/proc/interrogation(resist, mob/living/carbon/human/interrogator, torture=TRUE, false_result)
+/mob/living/carbon/human/proc/interrogation(mob/living/carbon/human/interrogator)
 	if(stat == DEAD)
 		return
 	var/resist_chance = 0
@@ -243,24 +244,29 @@
 
 	if(!prob(resist_chance))
 		var/datum/patron/victim_patron = src.patron
-		switch(victim_patron)
-			if(/datum/patron/inhumen/zizo)
+		if(istype(victim_patron, /datum/patron/inhumen/zizo))
+			if(prob(20))
+				src.praise_zizo()
+			else
 				var/list/cult_list = list()
 				for(var/mob/living/cultist in GLOB.player_list)
 					if(istype(cultist.patron, /datum/patron/inhumen/zizo))
 						cult_list += cultist.real_name
 				var/cultist_name = pick(cult_list)
 				say("[cultist_name]!", spans = list("torture"), forced = TRUE)
-			if(/datum/patron/old_god)
-				say(pick(victim_patron.confess_lines), spans = "torture", forced = TRUE)
-			else //They're 'mostly' innocent or unaffiliated with any organized cult movement
-				//A false confession
-				var/list/people_list = list()
-				for(var/mob/living/character in GLOB.player_list)
-					people_list += character.real_name
-				var/person_name = pick(people_list)
-				say("[person_name]!", spans = list("torture"), forced = TRUE)
+
+			return
+		else if(istype(victim_patron, /datum/patron/old_god))//It only really makes sense for psydonites to have confession lines tbqh
+			say(pick(victim_patron.confess_lines), spans = list("torture"), forced = TRUE)
+			//They're 'mostly' innocent or unaffiliated with any organized cult movement
+			//A false confession
+		else
+			var/list/people_list = list()
+			for(var/mob/living/character in GLOB.player_list)
+				people_list += character.real_name
+			var/person_name = pick(people_list)
+			say("[person_name]!", spans = list("torture"), forced = TRUE)
 	else
-		H.emote("agony", forced = TRUE)
 		to_chat(src, span_good("I resist the torture!"))
+		to_chat(interrogator, span_warning("I need to hurt them MORE."))
 	return
