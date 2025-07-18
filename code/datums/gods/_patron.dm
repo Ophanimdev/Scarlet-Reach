@@ -42,7 +42,7 @@ GLOBAL_LIST_EMPTY(preference_patrons)
 		pious.verbs += /mob/living/carbon/human/proc/emote_ffsalute
 	if (HAS_TRAIT(pious, TRAIT_CABAL))
 		pious.faction |= "cabal"
-		pious.verbs += list(/mob/living/carbon/human/proc/praise_zizo)
+		pious.verbs += list(/mob/living/carbon/human/proc/praise_zizo, /mob/living/carbon/human/proc/remember_associates)
 
 /datum/patron/proc/on_loss(mob/living/pious)
 	if (HAS_TRAIT(pious, TRAIT_CABAL))

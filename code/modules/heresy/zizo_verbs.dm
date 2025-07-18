@@ -8,7 +8,7 @@
 /mob/living/carbon/human/proc/praise_zizo()
 	set name = "Call to Overlord!"
 	set category = "ZIZO"
-	if(!src.can_speak_vocal || src.has_status_effect(/datum/status_effect/overlord))
+	if(!src.can_speak_vocal() || src.has_status_effect(/datum/status_effect/overlord))
 		return //You can only do this if you can actually speak
 	audible_message(span_danger("[src] praises <span class='bold'>Zizo</span>!"))
 	src.add_stress(/datum/stressevent/overlord_heard)
@@ -54,7 +54,7 @@
 	for(var/mob/living/carbon/human/C in GLOB.player_list)
 		if(HAS_TRAIT(C, TRAIT_CABAL) || C.patron == /datum/patron/inhumen/zizo)
 			var/name = C.real_name
-			var/job = C.job
+			var/job = C.mind.assigned_role
 			to_chat(src, span_cultitalic("[name] - [job]"))
 
 
