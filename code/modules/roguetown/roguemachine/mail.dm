@@ -276,7 +276,7 @@
 	list("name" = "Crossbow", "price" = 3, "obj" = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow),
 	list("name" = "Quiver of Bolts", "price" = 2, "obj" = /obj/item/quiver/bolts),
 	list("name" = "Quiver of Flaming Bolts", "price" = 5, "obj" = /obj/item/quiver/pyrobolts),
-	list("name" = "Lockpick ring", "price" = 1, "obj" = /obj/item/lockpickring),
+	list("name" = "Lockpick ring", "price" = 1, "obj" = /obj/item/lockpickring/mundane),
 	list("name" = "Inquisitorial Dagger", "price" = 3, "obj" = /obj/item/rogueweapon/huntingknife/idagger/silver/psydagger),
 	list("name" = "Skeleton Key", "price" = 15, "obj"= /obj/item/skeleton_key),
 	list("name" = "Gold Coins", "price" = 4, "obj" = /obj/item/roguecoin/gold/pile),
