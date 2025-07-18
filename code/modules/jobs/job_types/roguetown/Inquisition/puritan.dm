@@ -195,6 +195,7 @@
 	belt = /obj/item/storage/belt/rogue/leather
 	id = /obj/item/scomstone/bad
 	backpack_contents = list(/obj/item/storage/keyring/puritan = 1, /obj/item/grapplinghook = 1, /obj/item/storage/roguebag) //these will be renamed to show that Psydon is dead after the next knife update
+	GLOB.inquisition_points += 10
 
 /mob/living/carbon/human/proc/torture_victim()
 	set name = "Interrogate"
@@ -238,6 +239,8 @@
 		resist_chance += 45
 	if(HAS_TRAIT(H, TRAIT_CRITICAL_WEAKNESS))						// Negative for being bully-bait.
 		resist_chance -= 15
+	if(HAS_TRAIT(H, TRAIT_NOPAIN)) //Logic
+		resist_chance += 115
 	var/painpercent = (H.get_complex_pain() / (H.STAEND * 10)) * 100
 	if(painpercent < 100)											// If beaten/badly wounded, penalty.
 		resist_chance -= 15
