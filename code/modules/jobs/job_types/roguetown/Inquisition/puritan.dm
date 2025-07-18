@@ -20,6 +20,7 @@
 	min_pq = 10
 	max_pq = null
 	round_contrib_points = 2
+	var/inquisition_points = 15
 
 /datum/outfit/job/roguetown/puritan
 	name = "Inquisitor"
@@ -159,6 +160,41 @@
 
 /obj/item/clothing/shoes/roguetown/boots/armor/blk
 		color = CLOTHING_GREY
+
+
+/datum/advclass/puritan/untouchable //Incompetent morons that find themselves
+	name = "Untouchable"
+	tutorial = "Noble families will at times send their misborn, incompetent successors too important to simply prune like any misborn branch, yet too much of a failure to entrust with any bureaucratic duties. The Holy Inquisition appreciates the grand donations that accompany these buffoons."
+	outfit = /datum/outfit/job/roguetown/puritan/inspector
+
+	category_tags = list(CTAG_PURITAN)
+
+/datum/outfit/job/roguetown/puritan/untouchable/pre_equip(mob/living/carbon/human/H)
+	..()
+	H.adjust_skillrank(/datum/skill/misc/lockpicking, 5, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/climbing, 5, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/sneaking, 5, TRUE)
+	H.adjust_skillrank(/datum/skilll/misc/tracking, 5)
+	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/reading, 5, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/medicine, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/sewing, 4, TRUE)
+	H.change_stat("speed", 7)
+	H.change_stat("intelligence", -3)
+	H.verbs |= /mob/living/carbon/human/proc/torture_victim
+	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_SILVER_BLESSED, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_INQUISITION, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_PURITAN, JOB_TRAIT)
+	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
+	pants = /obj/item/clothing/under/roguetown/tights
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
+	shoes = /obj/item/clothing/shoes/roguetown/shortboots
+	backl = /obj/item/storage/backpack/rogue/satchel
+	belt = /obj/item/storage/belt/rogue/leather
+	id = /obj/item/scomstone/bad
+	backpack_contents = list(/obj/item/storage/keyring/puritan = 1, /obj/item/grapplinghook = 1, /obj/item/storage/belt/rogue/pouch/coins/rich = 1, /obj/item/storage/belt/rogue/pouch/coins/rich = 1, /obj/item/storage/belt/rogue/pouch/coins/rich = 1) //these will be renamed to show that Psydon is dead after the next knife update
 
 /mob/living/carbon/human/proc/torture_victim()
 	set name = "Interrogate"
