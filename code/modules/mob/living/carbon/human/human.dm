@@ -139,8 +139,8 @@
 				if(statpanel("Stats"))
 					stat("Vitae:", VD.vitae)
 		if((mind.assigned_role == "Orthodoxist") || (mind.assigned_role == "Inquisitor"))
-			if(statpanel("Status"))
-				stat("Confessions sent: [GLOB.confessors.len]")
+			if(statpanel("Stats"))
+				stat("Confessions sent: [GLOB.confessors.len]/5")
 
 	return //RTchange
 

@@ -701,6 +701,7 @@
 /area/rogue/indoors)
 "zf" = (
 /obj/structure/roguemachine/stockpile,
+/obj/structure/roguemachine/nkvd_confession,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "zp" = (

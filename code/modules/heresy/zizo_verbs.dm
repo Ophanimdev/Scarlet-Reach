@@ -50,11 +50,12 @@
 	set name = "Remember Fellow Qabalists"
 	set category = "ZIZO"
 
-	to_chat(src, span_cultbold("Cultistes ov ZIZO"))
+	to_chat(src, span_boldwarning("Cultistes ov ZIZO"))
+	to_chat(src, "\n")
 	for(var/mob/living/carbon/human/C in GLOB.player_list)
 		if(HAS_TRAIT(C, TRAIT_CABAL) || C.patron == /datum/patron/inhumen/zizo)
 			var/name = C.real_name
 			var/job = C.mind.assigned_role
-			to_chat(src, span_cultitalic("[name] - [job]"))
+			to_chat(src, span_italics("[name] - [job]"))
 
 

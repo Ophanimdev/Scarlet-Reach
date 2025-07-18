@@ -5590,6 +5590,11 @@
 /obj/item/reagent_containers/glass/cup/wooden,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors)
+"bRa" = (
+/obj/effect/decal/cleanable/blood,
+/obj/item/rogueweapon/tongs,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/church/basement)
 "bRd" = (
 /obj/effect/decal/mossy{
 	dir = 4
@@ -9014,7 +9019,6 @@
 /obj/item/book/rogue/bibble,
 /obj/machinery/light/rogue/wallfire/candle/r,
 /obj/item/roguekey/psydonkey,
-/obj/item/skeleton_key,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/church/basement)
 "cYm" = (
@@ -24118,17 +24122,15 @@
 /area/rogue/indoors/shelter/mountains/decap)
 "hVM" = (
 /obj/structure/fluff/walldeco/painting/seraphina{
-	pixel_y = 32
+	pixel_y = 38
 	},
 /obj/structure/table/wood{
 	dir = 1;
 	icon_state = "longtable_mid"
 	},
-/obj/item/paper,
-/obj/item/roguekey/church,
-/obj/item/roguekey/inquisition,
-/obj/item/roguekey/inquisition,
-/obj/item/roguekey/inquisition,
+/obj/structure/roguemachine/nkvd_confession{
+	pixel_y = 8
+	},
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/church/basement)
 "hVR" = (
@@ -27046,6 +27048,7 @@
 /obj/structure/fluff/walldeco/psybanner/red{
 	pixel_y = 32
 	},
+/obj/structure/chair/arrestchair,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/church/basement)
 "iRg" = (
@@ -27518,6 +27521,13 @@
 	pixel_x = 6;
 	pixel_y = 12
 	},
+/obj/item/roguekey/church,
+/obj/item/roguekey/church,
+/obj/item/roguekey/inquisition,
+/obj/item/roguekey/inquisition,
+/obj/item/roguekey/inquisition,
+/obj/item/roguekey/inquisition,
+/obj/item/roguekey/inquisition,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/church/basement)
 "iZi" = (
@@ -37924,7 +37934,7 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/mountains)
 "mBn" = (
-/obj/structure/fluff/psycross,
+/obj/effect/decal/cleanable/blood,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/church/basement)
 "mBr" = (
@@ -41423,6 +41433,7 @@
 "nJm" = (
 /obj/item/rogueweapon/thresher,
 /obj/structure/rack/rogue,
+/obj/item/storage/belt/rogue/surgery_bag/full,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/church/basement)
 "nJu" = (
@@ -48223,10 +48234,6 @@
 /area/rogue/indoors/shelter/woods)
 "pXp" = (
 /obj/structure/closet/crate/chest/neu_iron,
-/obj/item/paper/confession,
-/obj/item/paper/confession,
-/obj/item/paper/confession,
-/obj/item/paper/confession,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/church/basement)
 "pXv" = (
@@ -52217,11 +52224,6 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/mountains)
 "roa" = (
-/obj/item/paper/confession,
-/obj/item/paper/confession,
-/obj/item/paper/confession,
-/obj/item/paper/confession,
-/obj/item/paper/confession,
 /obj/structure/closet/crate/chest,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/church/basement)
@@ -54506,6 +54508,7 @@
 	icon_state = "longtable"
 	},
 /obj/item/natural/feather,
+/obj/item/skeleton_key,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/church/basement)
 "scM" = (
@@ -57517,11 +57520,9 @@
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/outdoors/mountains/decap)
 "taf" = (
-/obj/structure/bed/rogue/shit{
-	name = "makeshift bed"
-	},
-/obj/structure/fluff/walldeco/chains,
 /obj/machinery/light/rogue/wallfire/candle/blue,
+/obj/structure/fluff/walldeco/chains,
+/obj/structure/bed/rogue/bedroll,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/church/basement)
 "tar" = (
@@ -138940,7 +138941,7 @@ bhJ
 bhJ
 ogs
 llO
-kcq
+bRa
 kcq
 iQS
 nSG
