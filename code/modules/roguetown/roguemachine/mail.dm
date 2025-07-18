@@ -32,6 +32,7 @@
 	. = ..()
 	. += span_info("Load a coin inside, then right click to send a letter.")
 	. += span_info("Left click with a piece of confession or paper to send a prewritten letter for free.")
+	. += span_info("Right click if you're the Inquisitor to requisition supplies.")
 
 /obj/structure/roguemachine/mail/attack_right(mob/user)
 	. = ..()
@@ -284,6 +285,7 @@
 	list("name" = "burial shroud", "price" = 1,"obj" = /obj/item/burial_shroud),
 	list("name" = "Silver Throwing Knife", "price" = 1,"obj" = /obj/item/rogueweapon/huntingknife/throwingknife/psydon),
 	list("name" = "Bomb", "price" = 3, "obj" = /obj/item/bomb),
+	list("name" = "Lycanthropy Cure", "price" = 5, "obj" = /obj/item/quicksilver)
 )
 	var/points = GLOB.inquisition_points
 	var/list/purchasable = list()
