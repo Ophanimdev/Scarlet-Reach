@@ -141,6 +141,9 @@
 		if((mind.assigned_role == "Orthodoxist") || (mind.assigned_role == "Inquisitor"))
 			if(statpanel("Stats"))
 				stat("Confessions sent: [GLOB.confessors.len]/5")
+		if(mind.assigned_role == "Inquisitor")
+			if(statpanel("Stats"))
+				stat("Requisition Points: [GLOB.inquisition_points]")
 
 	return //RTchange
 
