@@ -174,7 +174,7 @@
 	H.adjust_skillrank(/datum/skill/misc/lockpicking, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/climbing, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/sneaking, 5, TRUE)
-	H.adjust_skillrank(/datum/skilll/misc/tracking, 5)
+	H.adjust_skillrank(/datum/skill/misc/tracking, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/reading, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/medicine, 4, TRUE)
@@ -214,55 +214,35 @@
 	if(!H.stat)
 		SEND_SIGNAL(src, COMSIG_TORTURE_PERFORMED, H)
 		H.emote("agony", forced = TRUE)
-		H.torture_victim_resist(src)
 		H.add_stress(/datum/stressevent/tortured)
 		return
 	to_chat(src, span_warning("This one is not in a ready state to be questioned..."))
-
-/mob/living/carbon/human/proc/torture_victim_resist(mob/living/carbon/human/user)
-	var/timerid = addtimer(CALLBACK(src, PROC_REF(interrogation), FALSE, user), 10 SECONDS, TIMER_STOPPABLE)
-	var/static/list/options = list("RESIST!!", "CONFESS!!")
-	var/responsey = input(src, "Resist torture?", "TEST OF PAIN", options)
-
-	if(SStimer.timer_id_dict[timerid])
-		deltimer(timerid)
-	else
-		to_chat(src, span_warning("Too late..."))
-		return
-	if(responsey == "RESIST!!")
-		interrogation(resist=TRUE, interrogator=user)
-	else
-		interrogation(resist=FALSE, interrogator=user)
 
 /mob/living/carbon/human/proc/interrogation(resist, mob/living/carbon/human/interrogator, torture=TRUE, false_result)
 	if(stat == DEAD)
 		return
 	var/resist_chance = 0
-	if(resist)
-		to_chat(src, span_boldwarning("I attempt to resist the torture!"))
-		resist_chance = (STAINT + STAEND) + 10
-		if(istype(buckled, /obj/structure/fluff/walldeco/chains))		// If the victim is on hanging chains, apply a resist penalty
-			resist_chance -= 10
-		var/mob/living/carbon/human/H
-		if(H.has_status_effect(/datum/status_effect/buff/drunk))		// Loose lips sink ships.
-			resist_chance -= 10
-		if(H.has_status_effect(/datum/status_effect/debuff/revived))	//Weakened body and mind
-			resist_chance -= 5
-		if(H.has_status_effect(/datum/status_effect/debuff/devitalised))	//Weakened soul and mind
-			resist_chance -= 10
-		if(HAS_TRAIT(H, TRAIT_DECEIVING_MEEKNESS))						// Guraded bonus given you hide your faith better than others.
-			resist_chance += 15
-		if(HAS_TRAIT(H, TRAIT_CRITICAL_WEAKNESS))						// Negative for being bully-bait.
-			resist_chance -= 15
-		var/painpercent = (H.get_complex_pain() / (H.STAEND * 10)) * 100
-		if(painpercent < 100)											// If beaten/badly wounded, penalty.
-			resist_chance -= 15
+	var/mob/living/carbon/human/H = src
+	//Why anyone thought that someone wouldn't want to resist torture is beyond me.
+	resist_chance = (STAINT + STAEND) + 10
+	if(istype(buckled, /obj/structure/fluff/walldeco/chains))		// If the victim is on hanging chains, apply a resist penalty
+		resist_chance -= 10
+	if(H.has_status_effect(/datum/status_effect/buff/drunk))		// Loose lips sink ships.
+		resist_chance -= 10
+	if(H.has_status_effect(/datum/status_effect/debuff/revived))	//Weakened body and mind
+		resist_chance -= 5
+	if(H.has_status_effect(/datum/status_effect/debuff/devitalised))	//Weakened soul and mind
+		resist_chance -= 10
+	if(HAS_TRAIT(H, TRAIT_DECEIVING_MEEKNESS))						// Guarded bonus. You're very good at keeping your lips tight.
+		resist_chance += 45
+	if(HAS_TRAIT(H, TRAIT_CRITICAL_WEAKNESS))						// Negative for being bully-bait.
+		resist_chance -= 15
+	var/painpercent = (H.get_complex_pain() / (H.STAEND * 10)) * 100
+	if(painpercent < 100)											// If beaten/badly wounded, penalty.
+		resist_chance -= 15
 
 	if(!prob(resist_chance))
 		var/datum/patron/victim_patron = src.patron
-		if(ispath(false_result, /datum/patron))
-			victim_patron = new false_result()
-
 		switch(victim_patron)
 			if(/datum/patron/inhumen/zizo)
 				var/list/cult_list = list()
@@ -280,6 +260,7 @@
 					people_list += character.real_name
 				var/person_name = pick(people_list)
 				say("[person_name]!", spans = list("torture"), forced = TRUE)
-
-	to_chat(src, span_good("I resist the torture!"))
+	else
+		H.emote("agony", forced = TRUE)
+		to_chat(src, span_good("I resist the torture!"))
 	return
